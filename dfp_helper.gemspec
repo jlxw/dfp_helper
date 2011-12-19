@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Jason Ling"]
   s.email       = ["jason@jeyel.com"]
   s.homepage    = "https://github.com/jlxw/dfp_helper"
-  s.summary     = "TODO: Summary of DfpHelper."
-  s.description = "TODO: Description of DfpHelper."
+  s.summary     = "Summary of DfpHelper."
+  s.description = "Description of DfpHelper."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
