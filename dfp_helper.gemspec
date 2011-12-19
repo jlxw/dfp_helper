@@ -7,9 +7,9 @@ require "dfp_helper/version"
 Gem::Specification.new do |s|
   s.name        = "dfp_helper"
   s.version     = DfpHelper::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
+  s.authors     = ["Jason Ling"]
+  s.email       = ["jason@jeyel.com"]
+  s.homepage    = "https://github.com/jlxw/dfp_helper"
   s.summary     = "TODO: Summary of DfpHelper."
   s.description = "TODO: Description of DfpHelper."
 
