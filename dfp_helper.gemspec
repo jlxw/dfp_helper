@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["jason@jeyel.com"]
   s.homepage    = "https://github.com/jlxw/dfp_helper"
   s.summary     = "Rails plugin to add DFP tags to your site."
-  s.description = "AKA Dart for Publishers Small Business, Google Ad Manager, Google Publisher Tags, GPT…"
+  s.description = "Rails plugin to add DFP tags to your site. AKA Dart for Publishers Small Business, Google Ad Manager, Google Publisher Tags, GPT..."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
