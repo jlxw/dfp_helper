@@ -28,7 +28,7 @@ Supports targeting options:
 
 === Slots in layout
 
-  If you have ad slots in your layout, you will need to make the calls to 'dfp_helper_slot' before 'dfp_helper_head', capture the output and then display it in the layout after.
+If you have ad slots in your layout, you will need to make the calls to 'dfp_helper_slot' before 'dfp_helper_head', capture the output and then display it in the layout after.
 
 
 == Licence
