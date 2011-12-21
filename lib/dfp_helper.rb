@@ -14,9 +14,9 @@ module DfpHelper
       
       _id = "div-gpt-ad-#{@@dfp_helper_id}-#{dfp_helper_slots.size}"
       _size = options[:size] || _i.match(/\d+x\d+/)[0].split('x')
-      dfp_helper_slots << {:id => _i, :div_id => _id, :size => _size}
+      dfp_helper_slots << options.merge({:id => _i, :div_id => _id, :size => _size})
       
-      raw <<-END
+      raw <<-END.strip
 <!-- #{_i} -->
 <div id='#{_id}' style='width:#{_size[0]}px; height:#{_size[1]}px;'>
 <script type='text/javascript'>
@@ -29,10 +29,11 @@ googletag.cmd.push(function() { googletag.display('#{_id}'); });
     def dfp_helper_head
       return unless dfp_helper_slots.size > 0
       o = dfp_helper_slots.collect{|i|
-        "googletag.defineSlot('#{i[:id]}', [#{i[:size].join(', ')}], '#{i[:div_id]}').addService(googletag.pubads());"
+        _targeting = (i[:targeting]||[]).collect{|k,v| ".setTargeting(#{k.to_json}, #{v.to_json})"}.join
+        "googletag.defineSlot('#{i[:id]}', [#{i[:size].join(', ')}], '#{i[:div_id]}').addService(googletag.pubads())#{_targeting};"
       }.join("\n")
       
-      raw <<-END
+      raw <<-END.strip
 <script type='text/javascript'>
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
