@@ -1,3 +1,36 @@
-= DfpHelper
+= dfp_helper
+
+Rails plugin to add DFP tags to your site.
+
+AKA Dart for Publishers Small Business, Google Ad Manager, Google Publisher Tags, GPT...
+
+== Installation
+
+  $ gem install dfp_helper
+
+== Usage
+
+=== In your layout between <head></head> put:
+
+  <%= dfp_helper_head %>
+
+=== In your views:
+  
+  <%= dfp_helper_slot '/1010898/sglinks_160x600' %>
+
+Size needs to be declared if it cannot be guessed from the slot name:
+  
+  <%= dfp_helper_slot '/11800773/moneymoney', {:size => [728,90]} %>
+
+Supports targeting options:
+  
+  <%= dfp_helper_slot '/11800773/moneymoney', {:size => [728,90], :targeting => {:host => 'sgforums.com', :countries => ['Singapore', 'Malaysia']}} %>
+
+=== Slots in layout
+
+  If you have ad slots in your layout, you will need to make the calls to 'dfp_helper_slot' before 'dfp_helper_head', capture the output and then display it in the layout after.
+
+
+== Licence
 
 This project rocks and uses MIT-LICENSE.
