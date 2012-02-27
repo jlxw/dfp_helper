@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    dfp_helper (0.0.4)
-      rails (~> 3.2.0)
+    dfp_helper (0.0.5)
+      rails (< 3.3)
 
 GEM
   remote: http://rubygems.org/
