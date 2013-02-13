@@ -30,6 +30,23 @@ Supports targeting options:
 
 If you have ad slots in your layout, you will need to make the calls to 'dfp_helper_slot' before 'dfp_helper_head', capture the output and then display it in the layout after.
 
+For example:
+  <% content_for :ad_160x600 do %>
+    <%= dfp_helper_slot '/1010898/sglinks_160x600' %>
+  <% end %>
+  <head>
+    ...
+    <%= dfp_helper_head %>
+    ...
+  </head>
+  <body>
+    ...
+    <%= content_for :ad_160x600 %>
+    ...
+  </body>
+
+
+
 
 == Licence
 
