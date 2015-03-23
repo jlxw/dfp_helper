@@ -48,6 +48,6 @@ For example:
 
 
 
-== Licence
+== License
 
 This project rocks and uses MIT-LICENSE.
